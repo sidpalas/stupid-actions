@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: read counter.txt value
+    - name: update counter and commit
       run: |
         ./recursive/check_counter_and_commit.sh
