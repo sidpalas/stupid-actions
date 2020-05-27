@@ -1,11 +1,11 @@
-name: holiday-reminder
+name: holiday-reminder-happy-new-year
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 0 1 1 *'
 
 jobs:
-  fail:
+  happy-new-year:
     runs-on: ubuntu-latest
     steps:
     - name: throw error
