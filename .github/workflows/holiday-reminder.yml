@@ -1,0 +1,12 @@
+name: holiday-reminder
+
+on:
+  schedule:
+    - cron:  '*/5 * * * *'
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+    - name: throw error
+      run: exit 1
