@@ -12,4 +12,4 @@ jobs:
 
     - name: read counter.txt value
       run: |
-        cat counter.txt
+        ./recursive/check_counter.sh
