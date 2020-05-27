@@ -1,0 +1,15 @@
+name: recursive action
+
+on:
+  push:
+    branches: [ recursive ]
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: read counter.txt value
+      run: |
+        cat counter.txt
