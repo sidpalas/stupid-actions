@@ -12,7 +12,6 @@ jobs:
 
     - name: update counter and commit
       env:
-        TEST: ${{ secrets.TEST }}
-        PERSONAL_GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
       run: |
         ./recursive/check_counter_and_commit.sh

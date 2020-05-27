@@ -9,11 +9,8 @@ then
 else
     echo "Count okay... continuing";
     echo $(( $count + 1 )) > $COUNTER_FILE
-    echo $TEST
     git config --global user.email "sid.palas@gmail.com"
     git config --global user.name "sid palas"
-    git config --global user.password $TEST
-    # git config --glocal user.password $PERSONAL_GITHUB_TOKEN
     git add $COUNTER_FILE
     git commit -m "Incremented counter file"
     git push 
