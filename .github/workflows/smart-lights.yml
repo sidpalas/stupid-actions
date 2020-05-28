@@ -1,0 +1,17 @@
+name: recursive action
+
+on:
+  push:
+    branches: [ smart-lights ]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Turn on smart lights
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Hello world action step
+      uses: ./smart-lights
+      with:
+        VESYNC_PASS: ${{ secrets.VESYNC_PASS  }}
