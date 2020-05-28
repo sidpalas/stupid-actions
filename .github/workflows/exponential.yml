@@ -1,0 +1,17 @@
+name: exponential action
+
+on:
+  push:
+    branches: [ exponential ]
+
+jobs:
+  update-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+
+    - name: update counter and commit (twice)
+      run: |
+        ./exponential/check_counter_and_commit.sh 1
