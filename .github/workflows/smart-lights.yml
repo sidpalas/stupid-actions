@@ -1,4 +1,4 @@
-name: recursive action
+name: smart light action
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     name: Turn on smart lights
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Hello world action step
       uses: ./smart-lights
       with:
