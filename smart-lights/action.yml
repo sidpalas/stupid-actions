@@ -1,6 +1,10 @@
 # action.yml
 name: 'Turn on Lights'
 description: 'Turn on smart home lights for a few seconds'
+inputs:
+  VESYNC_PASS:  
+    description: password for VESYNC_PASS
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
