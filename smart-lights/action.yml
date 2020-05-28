@@ -4,3 +4,5 @@ description: 'Turn on smart home lights for a few seconds'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.VESYNC_PASS }}
