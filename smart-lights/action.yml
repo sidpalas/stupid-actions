@@ -9,4 +9,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    - ${{ inputs.VESYNC_PASS }}
+    VESYNC_PASS: ${{ inputs.VESYNC_PASS }}
