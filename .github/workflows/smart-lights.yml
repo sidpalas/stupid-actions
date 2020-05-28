@@ -14,4 +14,4 @@ jobs:
     - name: Hello world action step
       uses: ./smart-lights
       with:
-        VESYNC_PASS: TEST
+        VESYNC_PASS: ${{ secrets.VESYNC_PASS }}
