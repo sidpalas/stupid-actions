@@ -1,8 +1,5 @@
 #!/bin/bash
 
-COUNTER_FILE=./exponential/counter.txt
-
-
 function increment_tag_push {
     uuid=$(uuidgen)
     suffix=$(( $count + 1 ))
@@ -16,7 +13,7 @@ count="$(echo -n $GITHUB_REF| tail -c 1)"
 echo $GITHUB_REF
 echo $count
 
-sleep 10
+sleep 10 # In case something goes wrong and I need to cancel the workflows
 
 if (( $count > 2 ));
 then 
