@@ -2,14 +2,9 @@
 
 COUNTER_FILE=./exponential/counter.txt
 
-function increment_commit_push {
-    count=$(cat "$COUNTER_FILE") 
-    echo $(( $count + 1 )) > $COUNTER_FILE
-    echo incremented!
-    git add $COUNTER_FILE
-    git commit -m "Incremented counter file"
-    # --force required since we will encounter conflicts with parallel jobs
-    git push --force
+function increment_tag_push {
+    git tag -a "$GITHUB_SHA.$1" -m "GITHUB_SHA tag"
+    git push origin "$GITHUB_SHA.$1"
 }
 
 count=$(cat "$COUNTER_FILE") 
@@ -22,6 +17,6 @@ else
     git config --global user.name "sid palas"
     for ((i = 1; i <= $1; i++ ));
     do
-    increment_commit_push
+    increment_tag_push $i
     done
 fi; 

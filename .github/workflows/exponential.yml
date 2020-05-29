@@ -3,6 +3,8 @@ name: exponential action
 on:
   push:
     branches: [ exponential ]
+    tags: [ '*' ]
+
 
 jobs:
   update-and-commit:
@@ -14,4 +16,4 @@ jobs:
         fetch-depth: 20
     - name: update counter and commit (twice)
       run: |
-        ./exponential/check_counter_and_commit.sh 2
+        ./exponential/check_counter_and_tag.sh 1
