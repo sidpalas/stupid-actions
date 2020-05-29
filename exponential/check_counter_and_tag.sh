@@ -5,13 +5,13 @@ COUNTER_FILE=./exponential/counter.txt
 
 function increment_tag_push {
     uuid=$(uuidgen)
-    prefix=$(( $count + 1 ))
-    tag=$prefix.$uuid.$1
-    git tag -a $tag -m "GITHUB_SHA tag"
+    suffix=$(( $count + 1 ))
+    tag=$1.$uuid.$suffix
+    git tag -a $tag -m "New UUID tag"
     git push origin $tag
 }
 
-count="$(echo $GITHUB_REF | head -c 1)"
+count="$(echo -n $GITHUB_REF| tail -c 1)"
 
 echo $GITHUB_REF
 echo $count
