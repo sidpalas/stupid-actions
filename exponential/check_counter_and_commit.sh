@@ -6,7 +6,7 @@ function increment_commit_push {
     count=$(cat "$COUNTER_FILE") 
     echo $(( $count + 1 )) > $COUNTER_FILE
     echo incremented!
-    git fetch --unshallow exponential
+    git fetch --unshallow origin
     git add $COUNTER_FILE
     git commit -m "Incremented counter file"
     # --force required since we will encounter conflicts with parallel jobs
@@ -14,7 +14,7 @@ function increment_commit_push {
 }
 
 count=$(cat "$COUNTER_FILE") 
-if (( $count > 5 ));
+if (( $count > 3 ));
 then 
     echo "Count too high... exiting";
 else
