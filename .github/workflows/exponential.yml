@@ -14,4 +14,4 @@ jobs:
         token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
     - name: add n tags
       run: |
-        ./exponential/check_counter_and_tag.sh 1
+        ./exponential/check_counter_and_tag.sh 2

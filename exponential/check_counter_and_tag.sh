@@ -18,7 +18,7 @@ echo $count
 
 sleep 10
 
-if (( $count > 3 ));
+if (( $count > 2 ));
 then 
     echo "Count too high... exiting";
 else
