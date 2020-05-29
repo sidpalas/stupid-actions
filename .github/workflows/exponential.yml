@@ -7,13 +7,13 @@ on:
 
 
 jobs:
-  update-and-commit:
+  update-and-tag:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         fetch-depth: 20
-    - name: update counter and commit (twice)
+    - name: add n tags
       run: |
         ./exponential/check_counter_and_tag.sh 1
