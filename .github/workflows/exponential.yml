@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-
+        fetch-depth: 20
     - name: update counter and commit (twice)
       run: |
         ./exponential/check_counter_and_commit.sh 2
