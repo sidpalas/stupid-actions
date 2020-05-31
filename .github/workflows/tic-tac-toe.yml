@@ -13,6 +13,8 @@ jobs:
 
     - name: Play turn
       uses: ./tic-tac-toe
+      with:
+        IS_AI: 'true' 
 
     - name: Commit and push
       run: |
