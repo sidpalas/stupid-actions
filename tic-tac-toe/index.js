@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const fs = require('fs');
 const prompt = require('prompt-sync')();
 
-const BOARD_PATH = './board.txt';
+const BOARD_PATH = './tic-tac-toe/board.txt';
 const EMPTY_BOARD = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 const readBoard = (path) => {
