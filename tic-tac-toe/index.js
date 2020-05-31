@@ -132,7 +132,7 @@ const aiTurn = () => {
 }
 
 const main = () => {
-  const isAi = process.env.IS_AI === 'true' || false;
+  const isAi = process.env.INPUT_IS_AI === 'true' || false;
   if (isAi) {
     aiTurn();
   }

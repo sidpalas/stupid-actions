@@ -8,5 +8,3 @@ inputs:
 runs:
   using: 'node12'
   main: 'index.js'
-  env:
-    IS_AI: ${{ inputs.IS_AI }}
