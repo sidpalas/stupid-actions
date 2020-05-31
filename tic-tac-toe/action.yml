@@ -1,7 +1,12 @@
 name: 'Tic-Tac-Toe'
 description: 'play a turn of '
+inputs:
+  IS_AI:  
+    description: Is it the AI's turn
+    required: false
+    default: 'true'
 runs:
   using: 'node12'
   main: 'index.js'
-  args:
-    - 'ai'
+  env:
+    IS_AI: ${{ inputs.IS_AI }}

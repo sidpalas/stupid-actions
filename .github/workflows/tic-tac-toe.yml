@@ -13,3 +13,11 @@ jobs:
 
     - name: Play turn
       uses: ./tic-tac-toe
+
+    - name: Commit and push
+      run: |
+        git config --global user.email "sid.palas@gmail.com"
+        git config --global user.name "sid palas"
+        git add ./tic-tac-toe/board.txt
+        git commit -m "played turn"
+        git push
