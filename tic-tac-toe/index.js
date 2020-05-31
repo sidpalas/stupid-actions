@@ -1,3 +1,4 @@
+const core = require('@actions/core');
 const fs = require('fs');
 const prompt = require('prompt-sync')();
 
@@ -141,4 +142,8 @@ const main = () => {
   return;
 }
 
-main();
+try{
+  main();
+} catch (error) {
+  core.setFailed(error.message);
+}

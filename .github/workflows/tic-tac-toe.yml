@@ -1,0 +1,15 @@
+name: tic-tac-toe action
+
+on:
+  push:
+    branches: [ tic-tac-toe ]
+
+jobs:
+  tic_tac_toe_job:
+    runs-on: ubuntu-latest
+    name: Play game
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Play turn
+      uses: ./tic-tac-toe

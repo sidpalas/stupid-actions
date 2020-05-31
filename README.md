@@ -41,6 +41,12 @@ This is the ultimate way to incentivize code velocity... you need to commit new 
 
 ---
 
+## World's Worst Tic-Tac-Toe UX
+
+The game Tic-Tac-Toe where you play a turn, commit the resulting board, wait for the AI to play its turn (within a GitHub action), and then play your next turn...
+
+---
+
 ## INSERT YOUR IDEA HERE
 
 Add an issue with your idea for a stupid action (or even better make a pull request!)

@@ -1,0 +1,5 @@
+name: 'Tic-Tac-Toe'
+description: 'play a turn of '
+runs:
+  using: 'node12'
+  main: 'index.js ai'
