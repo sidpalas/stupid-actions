@@ -2,7 +2,7 @@ name: tic-tac-toe action
 
 on:
   push:
-    branches: [ tic-tac-toe ]
+    branches: [ tik-tac-toe ]
 
 jobs:
   tic_tac_toe_job:
