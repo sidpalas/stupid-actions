@@ -1,19 +1,19 @@
 # Stupid Actions
 
-This repo contains stupid github actions. They are:
+This repo contains stupid GitHub actions. They are:
 
   - [Holiday Reminder](#holiday-reminder)
   - [Recursive Action](#recursive-action)
   - [Exponential Action](#exponential-action)
   - [Turning on Smart Lights with Each Commit](#turning-on-smart-lights-with-each-commit)
+  - [World's Worst Tic-Tac-Toe UX](#worlds-worst-tic-tac-toe-ux)
   - [INSERT YOUR IDEA HERE](#insert-your-idea-here)
-
 
 ## Holiday Reminder
 
 By using a cron schedule string and the fact that a failed job sends an email, we can make a holiday reminder email.
 
-We can even make sure to include specific text by naming our workflow and jobs with the desired info.
+We can even make sure to include specific text by naming our workflow and jobs with the desired info!
 
 ---
 
@@ -21,7 +21,7 @@ We can even make sure to include specific text by naming our workflow and jobs w
 
 By creating a commit and pushing it within an action triggered `on push` this would be trivial, except that GitHub specifically prevents commits made by the default repo token from triggering new workflows.
 
-To get around this, we use a Personal Access Token to perform the git commands and to prevent the chain from continuing forever I increment a counter file in the repo.
+To get around this, we use a Personal Access Token to perform the git commands and to prevent the chain from continuing forever we increment a counter file in the repo.
 
 ---
 
@@ -29,15 +29,15 @@ To get around this, we use a Personal Access Token to perform the git commands a
 
 Creating infinite actions using the `Recursive Action` above was fun... but how can we do it faster?!
 
-This action triggers N new workflows with each run. I couldn't use the same file counter trick to contain the process because of issues with the workflows trying to make simultaneous commits, so I moved my counters into tags!
+This action triggers N new workflows with each run. We cant use the same file counter trick to contain the process because of issues with the workflows trying to make simultaneous commits, so we move the counters into tags!
 
 ---
 
 ## Turning on Smart Lights with Each Commit
 
-I have some smart plugs at home and was able to find a python client for its API. Now with each commit I can turn the light on for some period of time.
+With some smart plugs and a python API client we can configure an action to turn our lights on for some period of time.
 
-This is the ultimate way to incentivize code velocity... you need to commit new code every N minutes to keep the lights on!
+This is the ultimate way to incentivize code velocity... we need to commit new code every N minutes to keep the lights on!
 
 ---
 
