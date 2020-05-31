@@ -45,6 +45,9 @@ This is the ultimate way to incentivize code velocity... you need to commit new 
 
 The game Tic-Tac-Toe where you play a turn, commit the resulting board, wait for the AI to play its turn (within a GitHub action), and then play your next turn...
 
+To play run:
+`node ./tic-tac-toe/index.js`
+
 ---
 
 ## INSERT YOUR IDEA HERE
