@@ -3,7 +3,7 @@
 COUNTER_FILE=./recursive/counter.txt
 
 count=$(cat "$COUNTER_FILE") 
-if (( $count > 5 ));
+if (( $count > 3 ));
 then 
     echo "Count too high... exiting";
 else
