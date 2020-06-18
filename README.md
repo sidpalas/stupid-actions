@@ -9,6 +9,10 @@ This repo contains stupid GitHub actions. They are:
   - [World's Worst Tic-Tac-Toe UX](#worlds-worst-tic-tac-toe-ux)
   - [INSERT YOUR IDEA HERE](#insert-your-idea-here)
 
+## Video Walkthrough
+
+I created a video explanation of these actions here: https://www.youtube.com/watch?v=w7-ugGAYVCo
+
 ## Holiday Reminder
 
 By using a cron schedule string and the fact that a failed job sends an email, we can make a holiday reminder email.
